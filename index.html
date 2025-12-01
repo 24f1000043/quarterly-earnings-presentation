@@ -6,15 +6,13 @@
   <title>Quarterly Earnings Report - Q4 2025</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css"> <!-- For dark slides -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.esm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"> <!-- Syntax theme -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+  <style>
+    .reveal .has-dark-background {
+      background-color: #2c3e50;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="reveal">
@@ -89,10 +87,10 @@ print(f"Average ROI: {avg_roi:.2f}%")</code></pre>
       <section>
         <h2>Financial Formulas</h2>
         <p>Return on Investment (ROI):</p>
-        \[ \text{ROI} = \left( \frac{\text{Net Profit}}{\text{Investment Cost}} \right) \times 100 \]
+        <p>\[ \text{ROI} = \left( \frac{\text{Net Profit}}{\text{Investment Cost}} \right) \times 100 \]</p>
         <p>Our Q4 ROI: <strong>18.5%</strong></p>
         <p>Earnings Per Share (EPS):</p>
-        \[ \text{EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Average Shares}} \]
+        <p>\[ \text{EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Average Shares}} \]</p>
         <aside class="notes">
           Explain ROI intuitively: "Profit per dollar invested." Tie back to our 18.5% achievement. End with Q&A.
         </aside>
@@ -100,24 +98,17 @@ print(f"Average ROI: {avg_roi:.2f}%")</code></pre>
     </div>
   </div>
 
-  <script>
-    import Reveal from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.esm.js';
-    import Markdown from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js';
-    import Highlight from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.esm.js';
-    import Math from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js';
-    import Notes from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js';
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
+  <script>
     Reveal.initialize({
       hash: true,
       transition: 'slide',
-      plugins: [Markdown, Highlight, Math, Notes],
-      math: {
-        mathJax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
-      },
-      highlight: {
-        // Highlight.js theme
-        theme: 'monokai',
-      },
+      plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes],
     });
   </script>
 </body>
