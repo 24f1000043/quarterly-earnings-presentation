@@ -15,6 +15,7 @@
   
   <style>
     .reveal .has-dark-background { background-color: #2c3e50; color: white; }
+    /* Footer for email visibility */
     .reveal .slides footer {
       position: absolute; bottom: 1em; left: 1em; font-size: 0.6em; color: #666; z-index: 10;
     }
@@ -28,7 +29,11 @@
       <section>
         <h1>Quarterly Earnings</h1>
         <h3>24f1000043@ds.study.iitm.ac.in</h3>
-        <p style="display:none;" id="email-check">24f1000043@ds.study.iitm.ac.in</p>
+        <p style="display:none;">24f1000043@ds.study.iitm.ac.in</p>
+        
+        <aside class="notes">
+          Welcome stakeholders to the Q4 report. Please mute your microphones.
+        </aside>
       </section>
 
       <section data-markdown>
@@ -36,6 +41,9 @@
           ## Summary
           - **Revenue**: $1.2B (↑15%)
           - **EPS**: $0.45
+
+          Note:
+          Mention the 15% growth was driven by the APAC region expansion.
         </textarea>
       </section>
 
@@ -45,6 +53,10 @@
           <li class="fragment">Revenue: <strong>15%</strong></li>
           <li class="fragment highlight-red">Debt: <strong>0.35</strong></li>
         </ul>
+        
+        <aside class="notes">
+           Click through these metrics slowly. Emphasize the debt reduction.
+        </aside>
       </section>
 
       <section>
@@ -59,6 +71,10 @@ df = pd.read_csv('earnings_q4.csv')
 # Calculate ROI
 print(f"ROI: {df['roi'].mean()}%")
         </code></pre>
+        
+        <aside class="notes">
+           This Python code demonstrates our automated reporting pipeline using Pandas.
+        </aside>
       </section>
 
       <section>
@@ -78,7 +94,7 @@ print(f"ROI: {df['roi'].mean()}%")
   <script>
     Reveal.initialize({
       hash: true,
-      // 5. REQUIRED: Load the plugins here
+      // Ensure RevealNotes is included here!
       plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes]
     });
   </script>
