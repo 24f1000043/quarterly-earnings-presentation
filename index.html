@@ -12,7 +12,21 @@
       background-color: #2c3e50;
       color: white;
     }
+    /* Persistent footer for email on all slides */
+    .reveal .slides footer {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 0.6em;
+      color: #666;
+      z-index: 10;
+    }
+    .reveal .has-dark-background footer {
+      color: #ccc;
+    }
   </style>
+  <!-- MathJax for equations -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -22,7 +36,8 @@
         <h1>Quarterly Earnings Report</h1>
         <h2>Q4 2025</h2>
         <p>Prepared by Technical Consultant</p>
-        <p><em>Contact: 24f1000043@ds.study.iitm.ac.in</em></p>
+        <p>Contact: 24f1000043@ds.study.iitm.ac.in</p> <!-- Plain text, no em -->
+        <footer>Contact: 24f1000043@ds.study.iitm.ac.in</footer>
         <aside class="notes">
           Welcome stakeholders. This interactive report highlights key financials. Use arrow keys to navigate; press 'S' for speaker view.
         </aside>
@@ -43,6 +58,7 @@
 
           > "Strong quarter positions us for 2026 growth." – CEO Quote
         </textarea>
+        <footer>Contact: 24f1000043@ds.study.iitm.ac.in</footer>
         <aside class="notes">
           Pause here to discuss revenue drivers. Emphasize APAC growth with a chart if time allows.
         </aside>
@@ -57,6 +73,7 @@
           <li class="fragment grow">EPS: <strong>$0.45</strong></li>
           <li class="fragment highlight-red">Debt Ratio: <strong>0.35</strong> (improved)</li>
         </ul>
+        <footer>Contact: 24f1000043@ds.study.iitm.ac.in</footer>
         <aside class="notes">
           Click to reveal each metric one by one. This builds suspense—highlight the debt improvement as a win.
         </aside>
@@ -78,6 +95,7 @@ df['ROI'] = (df['Net_Profit'] / df['Investment']) * 100
 print(df['ROI'].describe())
 avg_roi = np.mean(df['ROI'])
 print(f"Average ROI: {avg_roi:.2f}%")</code></pre>
+        <footer>Contact: 24f1000043@ds.study.iitm.ac.in</footer>
         <aside class="notes">
           Walk through the code: Lines 3-5 load data; 7 computes ROI. Demo live if presenting virtually—stress pandas for efficiency.
         </aside>
@@ -87,10 +105,11 @@ print(f"Average ROI: {avg_roi:.2f}%")</code></pre>
       <section>
         <h2>Financial Formulas</h2>
         <p>Return on Investment (ROI):</p>
-        <p>\[ \text{ROI} = \left( \frac{\text{Net Profit}}{\text{Investment Cost}} \right) \times 100 \]</p>
+        \[ \text{ROI} = \left( \frac{\text{Net Profit}}{\text{Investment Cost}} \right) \times 100 \]
         <p>Our Q4 ROI: <strong>18.5%</strong></p>
         <p>Earnings Per Share (EPS):</p>
-        <p>\[ \text{EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Average Shares}} \]</p>
+        \[ \text{EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Average Shares}} \]
+        <footer>Contact: 24f1000043@ds.study.iitm.ac.in</footer>
         <aside class="notes">
           Explain ROI intuitively: "Profit per dollar invested." Tie back to our 18.5% achievement. End with Q&A.
         </aside>
@@ -103,12 +122,14 @@ print(f"Average ROI: {avg_roi:.2f}%")</code></pre>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
-
   <script>
     Reveal.initialize({
       hash: true,
       transition: 'slide',
-      plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes],
+      plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes],
+      math: {
+        mathJax: true  // Enable MathJax for equations
+      }
     });
   </script>
 </body>
