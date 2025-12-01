@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings Report - Q4 2025</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css"> <!-- For dark slides -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"> <!-- Syntax theme -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Slide 1: Title -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <h2>Q4 2025</h2>
+        <p>Prepared by Technical Consultant</p>
+        <p><em>Contact: 24f1000043@ds.study.iitm.ac.in</em></p>
+        <aside class="notes">
+          Welcome stakeholders. This interactive report highlights key financials. Use arrow keys to navigate; press 'S' for speaker view.
+        </aside>
+      </section>
+
+      <!-- Slide 2: Markdown Slide -->
+      <section data-markdown>
+        <textarea data-template>
+          ## Earnings Summary
+
+          - **Revenue**: $1.2B (↑15% YoY)
+          - **Net Profit**: $250M (↑8% QoQ)
+          - **EPS**: $0.45 (meets expectations)
+
+          ### Key Drivers
+          - Market expansion in APAC
+          - Cost optimizations via AI tools
+
+          > "Strong quarter positions us for 2026 growth." – CEO Quote
+        </textarea>
+        <aside class="notes">
+          Pause here to discuss revenue drivers. Emphasize APAC growth with a chart if time allows.
+        </aside>
+      </section>
+
+      <!-- Slide 3: Fragments Animation -->
+      <section class="has-dark-background">
+        <h2>Key Metrics (Animated Reveal)</h2>
+        <ul>
+          <li class="fragment">Revenue Growth: <strong>15%</strong></li>
+          <li class="fragment fade-up">Profit Margin: <strong>20.8%</strong></li>
+          <li class="fragment grow">EPS: <strong>$0.45</strong></li>
+          <li class="fragment highlight-red">Debt Ratio: <strong>0.35</strong> (improved)</li>
+        </ul>
+        <aside class="notes">
+          Click to reveal each metric one by one. This builds suspense—highlight the debt improvement as a win.
+        </aside>
+      </section>
+
+      <!-- Slide 4: Code Sample with Highlighting -->
+      <section>
+        <h2>Financial Analysis Code</h2>
+        <pre><code class="python" data-line-numbers="3-5|7">import pandas as pd
+import numpy as np
+
+# Load quarterly data
+df = pd.read_csv('earnings_q4.csv')
+
+# Calculate ROI
+df['ROI'] = (df['Net_Profit'] / df['Investment']) * 100
+
+# Summary stats
+print(df['ROI'].describe())
+avg_roi = np.mean(df['ROI'])
+print(f"Average ROI: {avg_roi:.2f}%")</code></pre>
+        <aside class="notes">
+          Walk through the code: Lines 3-5 load data; 7 computes ROI. Demo live if presenting virtually—stress pandas for efficiency.
+        </aside>
+      </section>
+
+      <!-- Slide 5: Math Equations -->
+      <section>
+        <h2>Financial Formulas</h2>
+        <p>Return on Investment (ROI):</p>
+        \[ \text{ROI} = \left( \frac{\text{Net Profit}}{\text{Investment Cost}} \right) \times 100 \]
+        <p>Our Q4 ROI: <strong>18.5%</strong></p>
+        <p>Earnings Per Share (EPS):</p>
+        \[ \text{EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Average Shares}} \]
+        <aside class="notes">
+          Explain ROI intuitively: "Profit per dollar invested." Tie back to our 18.5% achievement. End with Q&A.
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    import Reveal from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.esm.js';
+    import Markdown from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js';
+    import Highlight from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.esm.js';
+    import Math from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js';
+    import Notes from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js';
+
+    Reveal.initialize({
+      hash: true,
+      transition: 'slide',
+      plugins: [Markdown, Highlight, Math, Notes],
+      math: {
+        mathJax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+      },
+      highlight: {
+        // Highlight.js theme
+        theme: 'monokai',
+      },
+    });
+  </script>
+</body>
+</html>
